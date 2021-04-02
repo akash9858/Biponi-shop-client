@@ -17,7 +17,7 @@ const AddProduct = () => {
       imageURL: imageURL,
       quantity: data.quantity
     };
-    const url = `http://localhost:5000/addEvent`;
+    const url = `https://blueberry-custard-29095.herokuapp.com/addEvent`;
 
     fetch(url, {
       method: 'POST',

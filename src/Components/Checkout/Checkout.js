@@ -10,16 +10,17 @@ const Checkout = () => {
   const [loggedInUser, setloggedInUser] = useContext(UserContext);
 
   useEffect(() => {
-    const url = `http://localhost:5000/checkout/${_id}`
+    const url = `https://blueberry-custard-29095.herokuapp.com/checkout/${_id}`
     fetch(url)
       .then(res => res.json())
       .then(data => setDetail(data))
   }, [_id]);
   const { name, price, wight } = detail;
+  console.log(detail)
 
   const handleCheckout = () => {
     const orderInfo = { name, price, wight, ...loggedInUser, orderTime: new Date() }
-    const url = `http://localhost:5000/addOrders`
+    const url = `https://blueberry-custard-29095.herokuapp.com/addOrders`
 
 
     fetch(url, {
