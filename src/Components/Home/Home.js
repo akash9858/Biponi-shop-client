@@ -15,7 +15,7 @@ const Home = () => {
 
     return (
         <div className="container ">
-            <div className="row">
+            <div className="row App">
                 {
                     events.length === 0 && <CircularProgress color="secondary" />
                 }

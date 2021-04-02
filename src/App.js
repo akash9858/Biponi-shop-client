@@ -7,6 +7,7 @@ import {
 import NotFound from './Components/NotFound/NotFound';
 import { createContext, useState } from 'react';
 import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
 import Home from './Components/Home/Home';
 import SignIn from './Components/SignIn/SignIn';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -32,7 +33,7 @@ function App() {
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <div>
-          <Header></Header>
+          <Header />
           <Switch>
             <Route exact path="/">
               <Home />
@@ -70,6 +71,7 @@ function App() {
               <NotFound />
             </Route>
           </Switch>
+          <Footer />
         </div>
       </Router>
     </UserContext.Provider>

@@ -37,7 +37,7 @@ const Checkout = () => {
 
 
   return (
-    <div className="container">
+    <div className="container App">
       <Table striped bordered hover variant="dark">
         <thead>
           <tr>
@@ -63,6 +63,7 @@ const Checkout = () => {
           </tr>
         </tbody>
       </Table>
+
       <Button variant="primary" onClick={handleCheckout}> Checkout</Button>
     </div>
   );
